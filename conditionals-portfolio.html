@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Ball</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
+    <script>
+   
+        
+        var x; 
+        var xSpeed;
+        var red;
+        function setup() {
+            createCanvas(500,500);
+        
+
+            red = 0;
+            x = 0; 
+            xSpeed = 15;
+        }
+
+        function draw() {
+          background(red,0,0);
+           if(mouseX > 300){
+            red++;
+          }
+          else{
+            red--;
+          }
+            ellipse(x,150,100,100);
+            
+            x += xSpeed;
+            
+            
+            if(x > width){ 
+                xSpeed = -5; 
+            }
+            
+           
+            if(x < 0){
+                xSpeed = 25;
+                
+            
+            }
+       
+            
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
